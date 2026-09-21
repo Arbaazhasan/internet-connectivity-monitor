@@ -13,6 +13,7 @@ function checkInternet() {
             exec("brave https://www.youtube.com/watch?v=5EpyN_6dqyk&list=RD5EpyN_6dqyk&start_radio=1");
 
             clearInterval(id);
+
             console.log("Program stopped checking.");
             return;
         }
@@ -20,6 +21,7 @@ function checkInternet() {
         console.log("Internet is already connected!");
 
         clearInterval(id);
+        console.log("Program stopped checking.");
 
     }).on("error", () => {
         wasOffline = true;
